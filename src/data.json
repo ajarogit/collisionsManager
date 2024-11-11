@@ -1,0 +1,15 @@
+[
+  ["Resource1", 10, 20],
+  ["Resource1", 18, 25],
+  ["Resource1", 30, 40],
+  ["Resource1", 35, 45],
+  ["Resource2", 5, 15],
+  ["Resource2", 20, 30],
+  ["Resource2", 25, 35],
+  ["Resource3", 15, 25],
+  ["Resource3", 10, 20],
+  ["Resource3", 30, 40],
+  ["Resource4", 0, 10],
+  ["Resource4", 10, 15],
+  ["Resource4", 25, 35]
+]

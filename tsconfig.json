@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",         // Set target to modern JavaScript
+    "module": "ESNext",         // Use ES modules
+    "moduleResolution": "node", // Helps TypeScript resolve modules like Node.js
+    "esModuleInterop": true,    // Allows for ES module interop (CommonJS/ES)
+    "skipLibCheck": true,       // Skips type-checking for declaration files
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,             // Enable all strict type-checking options
+    "noImplicitAny": false,     // Allow implicit any (you can adjust based on your needs)
+    "resolveJsonModule": true   // This allows importing JSON files in TypeScript
+  },
+  "include": [
+    "src/**/*.ts",               // Include all TypeScript files in the 'src' folder
+    "tests/**/*.ts"              // Include all TypeScript test files
+  ],
+  "exclude": [
+    "node_modules",              // Exclude node_modules from the compilation
+    "dist"                        // Exclude dist folder (if any)
+  ]
+}
