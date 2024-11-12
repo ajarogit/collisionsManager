@@ -115,16 +115,19 @@ export class Resource {
 
         const collisions: LockEntry[][] = [];
 
-        for (let i = 1; i < this.locksEntries.length; i++) {
-            const prevLock = this.locksEntries[i - 1]; // Previous lock
-            const currentLock = this.locksEntries[i]; // Current lock
+        for (let i = 0; i < this.locksEntries.length; i++) {
+            const currentLock = this.locksEntries[i];
 
-            // Check for overlap between the two locks
-            if (prevLock && prevLock.overlapsWith(currentLock)) {
-                if (findAll) {
-                    collisions.push([prevLock, currentLock]);
-                } else {
-                    return [[prevLock, currentLock]];  // Early return for the first collision
+            for (let j = i + 1; j < this.locksEntries.length; j++) {
+                const nextLock = this.locksEntries[j];
+
+                // Check for overlap between the two locks
+                if (currentLock.overlapsWith(nextLock)) {
+                    if (findAll) {
+                        collisions.push([currentLock, nextLock]);
+                    } else {
+                        return [[currentLock, nextLock]];  // Early return for the first collision
+                    }
                 }
             }
         }
